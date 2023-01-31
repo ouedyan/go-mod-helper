@@ -23,7 +23,8 @@
   about releases containing new features and fixes.
 
 <!-- Plugin description -->
-Provides helper docs, suggestions and actions for Go modules system dependencies.
+Provides helper docs, suggestions and actions for Go modules system dependencies.<br/>
+Warns you about newer available dependencies, and provide additional documentation to your go.mod file content.
 
 <ul>
 <li>

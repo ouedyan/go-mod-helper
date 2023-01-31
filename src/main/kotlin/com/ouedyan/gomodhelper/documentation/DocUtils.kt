@@ -22,7 +22,6 @@ object DocUtils {
                     null
                 } else {
                     markdown = removeUselessImageLinks(markdown)
-                    // TODO
                     HtmlMarkdownUtils.toHtml(markdown)
                 }
             } catch (e: IOException) {

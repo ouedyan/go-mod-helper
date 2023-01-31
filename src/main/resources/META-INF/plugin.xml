@@ -4,7 +4,7 @@
     <name>Go Mod Helper</name>
     <vendor email="yanouedraogo5@gmail.com" url="https://github.com/ouedyan">Yan Ouedraogo</vendor>
 
-    <idea-version since-build="223"/>
+    <idea-version since-build="223.6160.11"/>
 
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
