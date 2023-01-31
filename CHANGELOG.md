@@ -2,6 +2,8 @@
 
 # Go Mod Helper Changelog
 
+## [Unreleased]
+
 ## [1.0.0] - 2023-01-31
 ### Added
 - Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
