@@ -1,4 +1,4 @@
-package com.github.ouedyan.gomodhelper
+package com.ouedyan.gomodhelper
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

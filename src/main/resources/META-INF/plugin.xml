@@ -1,18 +1,42 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.ouedyan.gomodhelper</id>
-    <name>IntelliJ Platform Plugin go-mod-helper</name>
-    <vendor>ouedyan</vendor>
+    <id>com.ouedyan.gomodhelper</id>
+    <name>Go Mod Helper</name>
+    <vendor email="yanouedraogo5@gmail.com" url="https://github.com/ouedyan">Yan Ouedraogo</vendor>
 
+    <idea-version since-build="223"/>
+
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.plugins.go</depends>
+    <depends>com.intellij.modules.go-capable</depends>
+
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.ouedyan.gomodhelper.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.ouedyan.gomodhelper.services.MyProjectService"/>
+        <!--Go mod dependency version checker-->
+        <externalAnnotator language="vgo"
+                           implementationClass="com.ouedyan.gomodhelper.inspections.updateGoModDependencyToLatestVersion.UpdateGoModDependencyToLatestVersionExternalAnnotator"/>
+        <localInspection
+                language="vgo"
+                groupPath="Go modules"
+                groupName="General"
+                displayName="Update go.mod direct dependencies to latest version"
+                shortName="UpdateGoModDependencyToLatestVersion"
+                enabledByDefault="true"
+                level="INFO"
+                unfair="true"
+                implementationClass="com.ouedyan.gomodhelper.inspections.updateGoModDependencyToLatestVersion.UpdateGoModDependencyToLatestVersionInspection"
+        />
+        <!--Go mod dependency documentation provider-->
+        <lang.documentationProvider language="vgo"
+                                    id="GoModDependencyDocumentationProvider"
+                                    implementationClass="com.ouedyan.gomodhelper.documentation.GoModDependencyDocumentationProvider"/>
+        <!--Go mod dependency changelog provider-->
+        <lang.documentationProvider language="vgo"
+                                    id="GoModDependencyChangelogProvider"
+                                    implementationClass="com.ouedyan.gomodhelper.documentation.GoModDependencyChangelogProvider"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.ouedyan.gomodhelper.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>
