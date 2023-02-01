@@ -6,7 +6,7 @@
 
 <!-- Plugin description -->
 Provides helper docs, suggestions and actions for Go modules system dependencies.<br/>
-Warns you about newer available dependencies, and provide additional documentation to your go.mod file content.
+Warns you about newer available dependency versions, and provides additional documentation to your go.mod file.
 
 <ul>
 <li>
@@ -19,7 +19,7 @@ Warns you whenever there's a new version available for a direct dependency. Pres
 </li>
 <li>
 <h3>Go Package's changelog</h3>
-  Keep a track of how a dependency's changes.<br/>
+  Keep a track of your dependencies' changes.<br/>
   Hover over its version number to view its changelog.
 </li>
 <li>
@@ -28,7 +28,7 @@ Warns you whenever there's a new version available for a direct dependency. Pres
 </li>
 <li>
 <h3>Edit Linting Rules</h3>
-  You can edit or disable newer dependency version warning just like you would do with a normal inspection.</br> Just
+  You can edit or disable newer dependency version warning just like you would do with a normal inspection.<br/> Just
   head to <kbd>Settings/Preferences</kbd> > <kbd>Editor</kbd> > <kbd>Inspections</kbd> > <kbd>Go modules</kbd> > <kbd>
   General</kbd> > <kbd>Update go.mod direct dependencies...</kbd> inspection config.
 </li>
